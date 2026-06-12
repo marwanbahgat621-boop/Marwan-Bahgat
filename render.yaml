@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: beamit-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: SUPABASE_URL
+        value: https://gvyjxpwtmhwkvspmxylo.supabase.co
+      - key: SUPABASE_KEY
+        sync: false
